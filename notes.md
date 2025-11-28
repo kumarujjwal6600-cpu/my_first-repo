@@ -14,4 +14,6 @@
 
 * git status
 * git init -> initialize the .git in your folder
-* git clone <repo-url> 
+* git clone <repo-url> -> cloning from a remote repo
+* git add . -> your code gets staged
+* git commit -m "<comment>"
