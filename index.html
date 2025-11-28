@@ -5,15 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         .box{
             height: 100px;
             width: 100px;
             background-color: red;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div class="box"></div>
-    <button>change color</button>
+    <button class="btn">change color</button>
 </body>
+<script>
+        const btn = document.querySelector(".btn");
+        const box = document.querySelector(".box");
+
+        let changeColor = false;
+
+        btn.addEventListener("click" , () => {
+            if(!changeColor){
+                box.style.backgroundColor = "green";
+                changeColor = true;
+            }else{
+                box.style.backgroundColor = "red";
+                changeColor = false;
+            }
+          
+        })
+</script>
 </html>
